@@ -1,0 +1,186 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,700;1,14..32,700&display=swap');
+
+:root {
+    --primaryColor: #FFFFFF;
+    --secundaryColor: #C0C0C0;
+    --terciaryColor: #167BF7;
+    --backgroundColor: #00030C;
+    --font-principal: 'Inter', sans-serif;
+    --botao-azul-efeito: #3c92fa;
+}
+
+body {
+    background-color: var(--backgroundColor);
+    color: var(--primaryColor);
+    font-family: var(--font-principal);
+    font-size: 16px;
+    font-weight: 400;
+}
+
+.principal {
+    background-image: url("/SanctusPlus/assets/Background.png");
+    background-repeat: no-repeat;
+    background-size: contain;
+    align-items: center;
+    text-align: center;
+}
+
+.container {
+    height: 100vh;
+    display: grid;
+    grid-template-columns: 50% 50%;
+}
+
+.containerCaixa {
+    margin: 0 6em;
+}
+
+.containerTitulo {
+    font-size: 28px;
+    font-weight: 700;
+}   
+
+.containerImagem {
+    margin: 1em 0 2em 0;
+}
+
+.containerBotao {
+    background-color: var(--terciaryColor);
+    border-radius: 5px;
+    padding: 1em;
+    color: var(--primaryColor);
+    text-decoration: none;
+    margin-bottom: 1em;
+    display: flex;
+    justify-content: center;   
+}
+
+.containerBotaoSecundario {
+    background-color: transparent;
+    border-radius: 5px;
+    border: 2px solid var(--primaryColor);
+    padding: 1em;
+    color: var(--primaryColor);
+    text-decoration: none;
+    display: flex;
+    justify-content: center;   
+}
+
+.containerAviso {
+    font-size: 12px;
+    color: var(--secundaryColor);
+    text-decoration: none;
+}
+
+.secundario {
+    align-items: center;
+    margin: 0 10em;
+}
+
+.containerSecundarioImagem {
+    width: 80%;
+}
+
+.containerSecundarioTitulo {
+    font-size: 48px;
+    font-weight: 700;
+    margin-bottom: -0.45em;
+}
+
+.containerSecundarioTexto {
+    color: var(--secundaryColor);
+}
+
+.containerSecundarioBotao {
+    display: inline-block;
+}
+
+.containerSecundarioTitulo {
+    font-size: 48px;
+    font-weight: 700;
+    margin-bottom: -0.45em;
+}
+
+.terceario {
+    align-items: center;
+    margin: 0 10em;
+}
+
+.containerTercearioTexto {
+    color: var(--secundaryColor);
+    padding: 5px;
+}
+
+.containerTercearioBotao {
+    display: inline-block;
+}
+
+.containerTercearioImagem {
+    width: 80%;
+}
+
+.dispositivo {
+    text-align: center;
+}
+
+.dispositivoTitulo {
+    font-size: 48px;
+}
+
+.dipositivoLista {
+    display: flex;
+    justify-content: center;
+    list-style-type: none;
+    margin: 2em 0;
+}
+
+.dispositivoListaItem {
+    font-size:32px;
+}
+
+.rodape {
+    text-align: center;
+    font-size: 14px;
+    text-decoration: none;
+}
+
+.rodapeLista {
+    display: flex;
+    justify-content: center;
+    list-style-type: none;
+    margin: 2em 0;
+}
+
+.rodapeListaLink {
+    margin: 0 1em;
+    font-size: 14px;
+    a {
+        color: var(--primaryColor);
+        text-decoration: none;
+    }
+}
+
+.rodapeTexto {
+    color: var(--secundaryColor);
+    font-size: 12px;
+}
+
+.rodapeListaLink a:hover {
+    color: var(--terciaryColor);
+}
+
+.rodapeListaLink a:active {
+    color: var(--botao-azul-efeito);
+}
+
+.containerBotao:hover {
+    background-color: var(--terciaryColor);
+    color: var(--primaryColor);
+    border-radius: 5px;
+    border: 2px solid var(--primaryColor);
+}
+
+.containerBotaoSecundario:hover {
+    background-color: var(--botao-azul-efeito);
+    color:#00030C
+}
