@@ -1,0 +1,30 @@
+.container{
+	width:70vw;
+	height:70vh;
+	background-color:#021017;
+    display: flex;
+    gap:50px 50px;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.itens{
+	width:100px;
+	height:100px;
+}
+
+.azul{
+	background-color:#6bd1ff;
+    order:2;
+}
+
+.amarelo{
+	background-color:#ffba05;
+    order:1;
+}
+
+.vermelho{
+	background-color:#f16165;
+    order:3;
+}
