@@ -34,7 +34,7 @@ body {
 
 .cabecalhoMenuLink {
     font-family: var(--fontSecundaria);
-    font-size: 24px;
+    font-size: 1.5rem;
     font-weight: 600;
     color: var(--corTercearia);
     text-decoration: none;
@@ -46,25 +46,26 @@ body {
 
 .apresentacao {
     padding: 4% 15%;
+    gap: 82px;
     display: flex;
     align-items: center;
     justify-content: space-between;
 }
 
 .apresentacaoConteudo {
-    width: 615px;
+    width: 50%;
     display: flex;
     flex-direction: column;
     gap: 40px;
 }
 
 .apresentacaoConteudoTitulo {
-    font-size: 36px;
+    font-size: 2.25rem;
     font-family: var(--fontPrincipal);
 }
 
 .apresentacaoConteudoTexto {
-    font-size: 24px;
+    font-size: 1.5rem;
     font-family: var(--fontSecundaria);
 }
 
@@ -79,13 +80,13 @@ body {
 .apresentaoLinksSubTitulo {
     font-family: var(--fontPrincipal);
     font-weight: 400;
-    font-size: 24px;
+    font-size: 1.5rem;
 }
 
-.apresentacaoLinksLink {
-    width: 378px;
+.apresentacaoLinksNavecacao {
+    width: 50%;
     text-align: center;
-    font-size: 24px;
+    font-size: 1.5rem;
     text-decoration: none;
     color: var(--corSecundaria);
     font-family: var(--fontSecundaria);
@@ -103,6 +104,11 @@ body {
     background-color: var(--corHouver);
 }
 
+.fotodev {
+    width: 50%;
+    height: 50%;
+}
+
 .rodape {
     padding: 5px;
     color: var(--corPrincipal);
@@ -113,8 +119,32 @@ body {
 
 .rodapeTexto {
     font-family: var(--fontSecundaria);
-    font-size: 24px;
+    font-size: 1.5rem;
     font-weight: 400;
     text-align: center;
     flex-grow: 1;
+}
+
+@media (max-width: 1200px) {
+    .cabecalho {
+        padding: 10%;
+    }
+
+    .cabecalhoMenu {
+        justify-content: center;
+    }
+    
+    .apresentacao {
+        flex-direction: column-reverse;
+        padding: 5%;
+    }
+
+    .apresentacaoConteudo {
+        width: auto;
+    }
+
+    .fotodev {
+        width: 100%;
+        height: auto;
+    }
 }
