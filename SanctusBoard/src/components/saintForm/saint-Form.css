@@ -1,0 +1,19 @@
+.saint-form {
+  background-color: #212121;
+  padding: 32px 28px;
+  border-radius: 16px;
+  width: 384px;
+  max-width: 90%;
+  margin: 64px auto;
+}
+
+.filds {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.actions {
+  margin-top: 32px;
+  align-items: center;
+}

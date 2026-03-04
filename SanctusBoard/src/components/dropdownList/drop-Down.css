@@ -1,0 +1,10 @@
+.dropdown-list {
+    border-radius: 8px;
+    background-color: #212121;
+    border: 1px solid #4a4949;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 120%;
+    color: #FFFFFF;
+    padding: 8px 16px
+}
