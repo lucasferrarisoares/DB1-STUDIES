@@ -1,13 +1,12 @@
-import { Logout } from '../pages/Logout'
-import { Login } from '../pages/Login'
-import { Feed } from '../pages/Feed'
-import { ProtectedRoute } from '../components/ProtectedRoute'
-import { Register } from '../pages/Register'
-import { BlogPost } from '../pages/BlogPost'
-import { BrowserRouter, Route, Routes } from 'react-router'
-import { AuthLayout } from '../layouts/Auth'
-import { AppLayout } from '../layouts/App'
-import { NotFound } from '../pages/NotFound'
+import { BrowserRouter, Route, Routes } from "react-router"
+import { Register } from "../pages/Register"
+import { Login } from "../pages/Login"
+import { Logout } from "../pages/Logout"
+import { Feed } from "../pages/Feed"
+import { BlogPost } from "../pages/BlogPost"
+import { AuthLayout } from "../layouts/Auth"
+import { AppLayout } from "../layouts/App"
+import { NotFound } from "../pages/NotFound"
 
 export const AppRouter = () => {
     return (
@@ -19,19 +18,11 @@ export const AppRouter = () => {
                     <Route path='logout' element={<Logout />} />
                 </Route>
                 <Route path='/' element={<AppLayout />}>
-                    <Route path='' element={
-                        <ProtectedRoute>
-                            <Feed />
-                        </ProtectedRoute>
-                    } />
-                    <Route path='blog-post/:slug' element={
-                        <ProtectedRoute>
-                            <BlogPost />
-                        </ProtectedRoute>
-                    } />
+                    <Route path='' element={<Feed />} />
+                    <Route path='blog-post/:slug' element={<BlogPost />} />
                     <Route path='*' element={<NotFound />}/>
                 </Route>
             </Routes>
         </BrowserRouter>
     )
-}
+} 
