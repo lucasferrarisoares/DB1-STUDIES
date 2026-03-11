@@ -1,11 +1,21 @@
-import { Author } from "../Author"
 import styles from './cardpost.module.css'
-import { Link } from 'react-router'
+
+import { Author } from "../Author"
 import { ThumbsUpButton } from "./ThumbsUpButton"
-import { IconChat } from "../icons/IconChat"
-import { IconButton } from "../IconButton"
+import { ModalComment } from "../ModalComment"
+import { Link } from "react-router"
+import { useAuth } from '../../hooks/useAuth'
+import { usePostInteractions } from '../../hooks/usePostInteractions'
 
 export const CardPost = ({ post }) => {
+
+    const { isAuthenticated } = useAuth()
+    const { likes, comments, handleNewComment, handleLikeButton } = usePostInteractions(post)
+
+    const onLikeClick = () => {
+        handleLikeButton(post.id)
+    }
+
     return (
         <article className={styles.card}>
             <header className={styles.header}>
@@ -24,17 +34,15 @@ export const CardPost = ({ post }) => {
             <footer className={styles.footer}>
                 <div className={styles.actions}>
                     <div className={styles.action}>
-                        <ThumbsUpButton loading={false} />
+                        <ThumbsUpButton loading={false} onClick={onLikeClick} disabled={!isAuthenticated}/>
                         <p>
-                            {post.likes}
+                            {likes}
                         </p>
                     </div>
                     <div className={styles.action}>
-                        <IconButton>
-                            <IconChat />
-                        </IconButton>
+                        <ModalComment onSuccess={handleNewComment} postId={post.id}/>
                         <p>
-                            {post.comments.length}
+                            {comments.length}
                         </p>
                     </div>
                 </div>

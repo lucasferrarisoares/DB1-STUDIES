@@ -7,7 +7,7 @@ export const AppLayout = () => {
         <div className={styles.app}>
             <Aside />
             <div className={styles.content}>
-                <Outlet/>
+                <Outlet />
             </div>
         </div>
     )

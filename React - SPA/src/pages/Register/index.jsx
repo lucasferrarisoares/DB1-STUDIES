@@ -13,29 +13,28 @@ import { TextDivider } from "../../components/TextDivider"
 import { Providers } from "../../components/Providers"
 import { Link } from "../../components/Link"
 import styles from './register.module.css'
+import { useAuth } from "../../hooks/useAuth"
 import { useNavigate } from "react-router"
-import { useAuth } from "../../hooks/useAuth";
 
 export const Register = () => {
 
-    const { register } = useAuth();
-    const navigate = useNavigate();
+    const { register } = useAuth()
+    const navigate = useNavigate()
 
-    const onSubmit = (formData) => {
-        const name = formData.get('name');
-        const email = formData.get('email');
-        const password = formData.get('password');
+    const onSubmit = async (formData) => {
+        const name = formData.get('name')
+        const email = formData.get('email')
+        const password = formData.get('password')
 
-        const response = register(name, email, password)
+        const response = await register(name, email, password)
 
         if (response.success) {
             navigate('/auth/login')
         } else {
             console.error(response.error)
         }
+
     }
-
-
 
     return (
         <AuthFormContainer bannerSrc={banner}>
@@ -44,12 +43,12 @@ export const Register = () => {
             <Form action={onSubmit}>
                 <Fieldset>
                     <Label>
-                        Name
+                        Nome
                     </Label>
                     <Input
                         name="name"
                         id="name"
-                        placeholder="Name completo"
+                        placeholder="Nome completo"
                         required
                     />
                 </Fieldset>

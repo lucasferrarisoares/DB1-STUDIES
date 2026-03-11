@@ -18,13 +18,13 @@ import { useNavigate } from "react-router"
 
 export const Login = () => {
 
-    const { login } = useAuth();
-    const navigate = useNavigate();
+    const { login } = useAuth()
+    const navigate = useNavigate()
 
-    const onSubmit = (formData) => {
-        const email = formData.get('email');
-        const password = formData.get('password');
-        const response = login(email, password)
+    const onSubmit = async (formData) => {
+        const email = formData.get('email')
+        const password = formData.get('password')
+        const response = await login(email, password)
 
         if (response.success) {
             navigate('/')
@@ -34,7 +34,6 @@ export const Login = () => {
     }
 
     return (
-
         <AuthFormContainer bannerSrc={banner}>
             <Typography variant="h1" color="--offwhite">Login</Typography>
             <Typography variant="h2" color="--offwhite">Boas-vindas! Faça seu login.</Typography>
